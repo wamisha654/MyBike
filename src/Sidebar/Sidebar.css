@@ -1,0 +1,91 @@
+.sidebar {
+  
+  min-width: 250px;
+  width: 15%;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: white; /* Adjust as needed */
+  border-right: 2px solid #e5e5e5;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+
+}
+.close-side{
+	display: flex;
+	
+	width: 100%;
+	justify-content: flex-end;
+	font-size: 2rem;
+	
+}
+.close-side a{
+  cursor: pointer;
+  padding: 7px;
+}
+.sidebar-title{
+	font-size: 22px;
+	font-weight: normal;
+	margin-bottom: 20px;
+	padding-top: 100px;
+}
+.sidebar-items{
+	margin-top: 20px;
+}
+.sidebar-label-container{
+	display: block;
+	position: relative;
+	padding-left: 30px;
+	padding-bottom: 10px;
+	cursor: pointer;
+	-webkit-user-select:none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+}
+.sidebar-label-container input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.sidebar-label-container:hover input[type="radio"] + .checkmark,
+.sidebar-label-container input[type="radio"]:checked + .checkmark {
+    background-color: #ccc;
+}
+
+.sidebar-label-container input[type="radio"]:checked + .checkmark {
+    background-color: #2196f3;
+}
+.checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sidebar-label-container input[type="radio"]:checked + .checkmark::after {
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: white;
+}
+

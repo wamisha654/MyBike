@@ -1,0 +1,14 @@
+.cart-card{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.cart-card img{
+   width: 100px;
+   border: solid 1px;
+}
+.cart-card input{
+   max-width: 30px;
+}

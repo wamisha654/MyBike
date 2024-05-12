@@ -1,0 +1,43 @@
+a{
+	text-decoration: none;
+	color: black;
+
+}
+.card{
+	margin: 5px;
+	border: 2px solid #ededed;
+	border-radius: 0.25rem;
+	padding: 20px;
+	cursor: pointer;
+	width: 100%;
+	max-width: 15rem;
+	height: 20rem;
+	
+
+}
+
+.card-title{
+	margin-bottom: 1rem;
+}
+.card-reviews{
+	margin-bottom: 1rem;
+	display: flex;
+
+}
+.ratings-star{
+	color: #d5ab55;
+}
+.card-price{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.ProductList{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	
+	justify-content: center;
+	
+	
+}
