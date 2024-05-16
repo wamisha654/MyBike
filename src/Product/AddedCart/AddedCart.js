@@ -24,10 +24,10 @@ const AddedCart = ({ addedProducts, onProductRemove }) => { // Receive addedProd
   }
   return (
     <div>
-      {addedProducts.map((product, index) => ( // Map over addedProducts to render each product
+      {addedProducts.map((product, index) => ( 
         <div key={index} className="cart-card">
           <img className="mr6" src={product.img} alt="product" />
-          <h3 className="mr6">{product.title}</h3>
+          <h3 className="mr6 w-10 f5">{product.title}</h3>
           <div className="mr6">
             <button onClick={decreaseQuantity}>-</button>
             <input className="tc" id="quantity" name="quantity" readOnly value={quantity} onChange={(e) => setQuantity(parseInt(e.target.value))} />
