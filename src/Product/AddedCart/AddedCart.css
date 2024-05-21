@@ -1,9 +1,16 @@
+.carted{
+	display: flex;
+	justify-content: center;
+}
 .cart-card{
+	
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	
-	margin: 8px 0 8px 0px;
+	justify-content: space-between;
+	min-width: 50vw;
+	margin-top: 8px;
+	margin-right: 20px;
 
 }
 
@@ -13,4 +20,18 @@
 }
 .cart-card input{
    max-width: 30px;
+}
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.cart-description{
+	
+	border-left: solid 1px black;
+	min-width: 20vw;
+	padding-left: 30px;
+}
+.cart-description button{
+	background-color: lightgreen;
 }

@@ -29,7 +29,7 @@ const Navigation = ({ searchChange, clickCategory, priceRange}) => {
 
       <div className="tc pb3">
         <ul className="Ulists">
-          <li>
+          {/*<li>
             <Link  className="link dim gray f6 f5-ns mr5"  title="category">Category</Link>
             <ul id="submenu">
               <li><a className="link black  f6 f5-ns mr5" href="#" title="About" onClick={() => handleCategoryClick("city")}>City bikes</a></li>
@@ -39,10 +39,12 @@ const Navigation = ({ searchChange, clickCategory, priceRange}) => {
               <li><a className="link black  f6 f5-ns mr5" href="#" title="About" onClick={() => handleCategoryClick("mountain")}>Mountain bikes</a></li>
               <li><a className="link  black f6 f5-ns mr5" href="#" title="About" onClick={() => handleCategoryClick("children")}>Children bikes</a></li>
             </ul>
-          </li>
-          <li><a className="link dim gray f6 f5-ns mr5" href="#" title="About">About</a></li>
+          </li>*/}
           <li><Link to= "/store" className="link dim gray f6 f5-ns mr5"title="Store">Store</Link></li>
-          <li><a className="link dim gray f6 f5-ns mr5" onClick={toggleFilterSidebar} href="#" title="Filter">Filter</a></li>
+          <li><Link to = "/service" className="link dim gray f6 f5-ns mr5" href="#" title="Service">Service</Link></li>
+          <li><a className="link dim gray f6 f5-ns mr5" href="#" title="About">About</a></li>
+
+          {/*<li><a className="link dim gray f6 f5-ns mr5" onClick={toggleFilterSidebar} href="#" title="Filter">Filter</a></li>*/}
           <li><a className="link dim gray f6 f5-ns mr5" href="#" title="Contact">Contact</a></li>
         </ul>
       </div>

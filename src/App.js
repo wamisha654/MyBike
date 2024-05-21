@@ -8,6 +8,7 @@ import Footer from './Footer/Footer.js';
 import initialData from './Data/Data.js'; 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Home/Home.js'; 
+import Service from './Service/Service.js'; 
 import Cart from './Product/Cart/Cart.js'; 
 import AddedCart from './Product/AddedCart/AddedCart.js';
 
@@ -80,6 +81,7 @@ const App = () => {
           <Route path="/store" element={<ProductList data={filterData} onSelect={handleProductSelect}/>} />
           <Route path="/selectedProduct" element={<Cart selectedProduct={selectedProduct} onAddToCart={handleAddToCart} />} />
           <Route path="/carts" element={<AddedCart addedProducts={cart} onProductRemove={handleProductRemove} />} />
+          <Route path="/service" element={<Service />} />
           {/*<Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/service" element={<Sidebar />} />*/}
