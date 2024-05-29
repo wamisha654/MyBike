@@ -40,7 +40,7 @@ const Navigation = ({ searchChange, clickCategory, priceRange}) => {
               <li><a className="link  black f6 f5-ns mr5" href="#" title="About" onClick={() => handleCategoryClick("children")}>Children bikes</a></li>
             </ul>
           </li>*/}
-          <li><Link to= "/store" className="link dim gray f6 f5-ns mr5"title="Store">Store</Link></li>
+          <li><Link to= "/store" className="link dim gray f6 f5-ns mr5"title="Store" onClick={() => handleCategoryClick(null)}>Store</Link></li>
           <li><Link to = "/service" className="link dim gray f6 f5-ns mr5" href="#" title="Service">Service</Link></li>
           <li><a className="link dim gray f6 f5-ns mr5" href="#" title="About">About</a></li>
 

@@ -13,21 +13,7 @@
 
 }
 
-.img-wrapper{
- display: flex;
- flex-wrap: wrap;
- cursor: pointer;
- justify-content: center;
 
- 
-
-}
-.img-wrapper img{
-	height: 13rem;
-	width: 25rem;
-	margin: 5px;
-	
-}
 .overlay{
 	position: absolute;
 	bottom: 0;
@@ -43,12 +29,13 @@
 	cursor: pointer;
 }
 .main-container img{
-	width: 35vw;
-	height: 40vh;	
-	cursor: pointer;
+	height: 100%;
 }
 .shop{
 	position: relative;
+	width: 35vw;
+	height: 40vh;	
+	cursor: pointer;
 }
 .shop:hover .overlay{
 	height: 100%;
@@ -160,6 +147,26 @@
 	padding: 10px;
 	margin: 3rem;
 	color: dimgray;
+}
+.img-wrapper{
+ display: flex;
+ flex-wrap: wrap;
+ cursor: pointer;
+ justify-content: center;
+
+ 
+
+}
+.img-wrapper img{
+	height: 100%;
+	width: 100%;
+	
+}
+.bike-category a{
+  height: 13rem;
+	width: 25rem;
+	margin: 5px;
+	
 }
 
 @keyframes slider{

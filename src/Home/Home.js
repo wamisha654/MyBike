@@ -9,14 +9,16 @@ import mountain from './mountain.webp';
 import {Link} from 'react-router-dom';
 
 
-const Home = () =>{
+const Home = ({clickCategory}) =>{
+  const handleCategoryClick = (category) => {
+        clickCategory(category);
+    }
  return(
   <div className="home">
    <h2 className="types">Welcome to our site</h2>  
    <div className="main-container">
     <div className = "container">
      <div className="wrapper">
-     <Link to= "/service">
      <div className="wrapper-holder">
      
        <div id="slider-img-1"></div>
@@ -25,10 +27,12 @@ const Home = () =>{
        <div id="slider-img-4"></div>
        
      </div>
+     <Link to= "/service">
+      <div className="overlay">
+        <h1 className="overlay-service">Service</h1>
+      </div>
      </Link>
-     <div className="overlay">
-       <h1 className="overlay-service">Service</h1>
-     </div>
+     
    </div>
    <div className="button-holder">
      <a href="#slider-img-1" className="button"></a>
@@ -39,27 +43,30 @@ const Home = () =>{
     
     </div>
     <div className="shop">
+      <img src={imgShop} alt="image" />
           <Link to="/store">
-            <img src={imgShop} alt="image" />
+            <div className="overlay">
+              <h1 className="overlay-service">Shop</h1>
+            </div>
           </Link>
-          <div className="overlay">
-           <h1 className="overlay-service">Shop</h1>
-          </div>
+          
     </div>
     
    </div>
   <h2 className="types">Is this what you are looking for?</h2>  
-  <div className="img-wrapper">
-     <a className="children relative f2">
+  <Link to="store">
+  <div className="bike-category">
+    <div className="img-wrapper">
+     <a className="children relative f2 100h">
        <img src={children} alt="image" />
        <div className="overlay">
-           <h1 className="overlay-service">Children</h1>
+           <h1 className="overlay-service" onClick={() => handleCategoryClick("children")}>Children</h1>
        </div>
      </a>
      <a className="mountain relative f2">
       <img src={mountain} alt="image" />
       <div className="overlay">
-           <h1 className="overlay-service">Mountain</h1>
+           <h1 className="overlay-service" onClick={() => handleCategoryClick("mountain")}>Mountain</h1>
           </div>
      </a>
      
@@ -68,17 +75,19 @@ const Home = () =>{
      <a className="road relative f2">
        <img src={road} alt="image" />
        <div className="overlay">
-           <h1 className="overlay-service">Road</h1>
+           <h1 className="overlay-service" onClick={() => handleCategoryClick("road")}>Road</h1>
           </div>
      </a>
      <a className="city relative f2">
       <img src={city} alt="image" />
-      <div className="overlay">
-           <h1 className="overlay-service">City</h1>
+      <div className="overlay" >
+           <h1 className="overlay-service" onClick={() => handleCategoryClick("city")}>City</h1>
           </div>
      </a>
      
   </div>
+  </div>
+  </Link>
   <h2 className="types">The brand you'll find</h2> 
   <div className="second-container">
 

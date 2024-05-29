@@ -77,7 +77,7 @@ const App = () => {
       <div>
         <Navigation searchChange={onSearchChange} clickCategory={clickCategory} priceRange={priceRange}/> 
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home clickCategory={clickCategory} />} />
           <Route path="/store" element={<ProductList data={filterData} onSelect={handleProductSelect}/>} />
           <Route path="/selectedProduct" element={<Cart selectedProduct={selectedProduct} onAddToCart={handleAddToCart} />} />
           <Route path="/carts" element={<AddedCart addedProducts={cart} onProductRemove={handleProductRemove} />} />
