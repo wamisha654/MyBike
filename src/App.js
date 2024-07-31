@@ -82,6 +82,7 @@ const App = () => {
           <Route path="/selectedProduct" element={<Cart selectedProduct={selectedProduct} onAddToCart={handleAddToCart} />} />
           <Route path="/carts" element={<AddedCart addedProducts={cart} onProductRemove={handleProductRemove} />} />
           <Route path="/service" element={<Service />} />
+          <Route path="/appointment" element={<Appointment />} />
           {/*<Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/service" element={<Sidebar />} />*/}

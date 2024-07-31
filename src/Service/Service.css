@@ -1,0 +1,48 @@
+.service {
+            
+       display: flex;     
+       justify-content: center;
+            
+          
+   }
+   .service-containter{
+   	        display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 2rem;
+   	        max-width: 1200px;
+   }
+
+.serv-img{
+        	position: relative;
+        	width: 100%;
+            height: auto;
+
+        }
+.serv-img img {
+        	width: 100%;
+          }
+
+.text {
+            position: absolute;
+            
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 1.5em;
+            text-align: center;
+        }
+ .text p{
+        	margin-top: -30px;
+        }
+ .service-list{
+ 	
+ }       
+ .service-list h1{
+ 	border-bottom: solid lightgreen 4px;
+ 	padding-bottom: 9px;
+ }
+ .service-list p{
+ 	font-family: unset;
+ }
