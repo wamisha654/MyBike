@@ -3,28 +3,29 @@ import './Navigation.css';
 import { BsCartFill } from "react-icons/bs";
 import { RiAccountPinBoxFill } from "react-icons/ri";
 import Sidebar from '../Sidebar/Sidebar.js';
-import SignIn from '../SignIn/SignIn.js';
 import {Link} from 'react-router-dom';
 
 const Navigation = ({ searchChange, clickCategory, priceRange}) => {
   const [showFilterSidebar, setShowFilterSidebar] = useState(false);
-  const [showSignIn, setShowSignIn] = useState(false)
+ 
   const toggleFilterSidebar = () => {
     setShowFilterSidebar(!showFilterSidebar);
   };
   const handleCategoryClick = (category) => {
         clickCategory(category);
     }
-  const pageSignin = () =>{
-    setShowSignIn(!showSignIn);
-  }
+
   return (
     <nav className="pa3 pa4-ns">
       <div className="first-nav">
         <Link to="/" className="comp-name mr5" href="#" title="Home">Wami Bikes</Link>
         <input type="search" placeholder="type here" onChange={searchChange} className="link ssch gray f6 tc f5-ns mr5" />
         <Link to = "carts" className="link mr3 f3"><BsCartFill /></Link>
-        <a className="link f3" onClick={pageSignin}><RiAccountPinBoxFill /></a>
+        {localStorage.getItem('auth-token') 
+        ? <button className="link mr3 f3" onClick={()=>{localStorage.removeItem('auth-token'); window.location.replace("/")}}>Logout</button>
+        : <Link to = "signin" className="link f3"><RiAccountPinBoxFill /></Link>}
+        
+        
       </div>
 
       <div className="tc pb3">
@@ -49,7 +50,7 @@ const Navigation = ({ searchChange, clickCategory, priceRange}) => {
         </ul>
       </div>
       {showFilterSidebar && <Sidebar toggleFilterSidebar={toggleFilterSidebar} clickCategory={clickCategory} priceRange={priceRange}/>}
-      {showSignIn && <SignIn />}
+      
     </nav>
   );
 };
