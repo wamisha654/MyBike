@@ -58,3 +58,12 @@
 #submenu > *{
     margin-top: 10px;
 }
+.logout-butt{
+    height: 29px;
+    width: 60px;
+    font-size: 14px;
+    border-radius: 10px;
+    background-color: palegreen;
+    border-color: greenyellow;
+    cursor: pointer;
+}

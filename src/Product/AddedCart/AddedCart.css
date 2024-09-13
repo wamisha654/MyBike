@@ -13,7 +13,12 @@
 	margin-right: 20px;
 
 }
-
+.prod-name{
+ max-width: 140px;
+}
+.inc-dec-butt button{
+ width: 25px;
+}
 .cart-card img{
    width: 100px;
    border: solid 1px;
@@ -27,11 +32,16 @@
   margin-top: 1rem;
 }
 .cart-description{
-	
-	border-left: solid 1px black;
-	min-width: 20vw;
-	padding-left: 30px;
+	height: 300px;
+	min-width: 25vw;
+	padding: 20px;
+	border-radius: 6px;
+	background: #f6f6f6;
+	position: sticky;
+	top:0;
+	height: fit-content;
 }
 .cart-description button{
 	background-color: lightgreen;
+	text-align: center;
 }

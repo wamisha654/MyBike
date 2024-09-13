@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './AddedCart.css';
 import { MdDeleteOutline } from "react-icons/md";
+import {Link} from 'react-router-dom';
 
 const AddedCart = ({ addedProducts, onProductRemove }) => { 
   const [quantities, setQuantities] = useState(addedProducts.map(() => 1));
@@ -49,9 +50,9 @@ const AddedCart = ({ addedProducts, onProductRemove }) => {
       <div>
         {addedProducts.map((product, index) => (
           <div key={index} className="cart-card">
-            <img className="mr1" src={product.img} alt="product" />
-            <h3 className="mr1 w-10 f5">{product.title}</h3>
-            <div className="mr1">
+            <img src={product.image} alt="product" />
+            <h5 className="prod-name">{product.name}</h5>
+            <div className="inc-dec-butt">
               <button onClick={() => decreaseQuantity(index)}>-</button>
               <input 
                 className="tc" 
@@ -62,7 +63,7 @@ const AddedCart = ({ addedProducts, onProductRemove }) => {
               />
               <button onClick={() => increaseQuantity(index)}>+</button>
             </div>
-            <p className="mr1">{product.newPrice * quantities[index] + 'PLN'}</p>
+            <p className="mr1">{product.new_price * quantities[index] + 'PLN'}</p>
             <button onClick={() => onProductRemove(index)}><MdDeleteOutline /></button>
           </div>
         ))}
@@ -80,7 +81,8 @@ const AddedCart = ({ addedProducts, onProductRemove }) => {
           <span>Including delivery:</span>
           <span>{includingDelivery() + ' PLN'}</span>
         </p>
-          <button className="mt4 button">Delivery & Payment</button>
+        <Link to="/delivery"><button className=" button">Delivery & Payment</button></Link>
+          
 
           
         </div>

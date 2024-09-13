@@ -60,13 +60,13 @@ const Home = ({clickCategory}) =>{
      <a className="children relative f2 100h">
        <img src={children} alt="image" />
        <div className="overlay">
-           <h1 className="overlay-service" onClick={() => handleCategoryClick("children")}>Children</h1>
+           <h1 className="overlay-service" onClick={() => handleCategoryClick("Children")}>Children</h1>
        </div>
      </a>
      <a className="mountain relative f2">
       <img src={mountain} alt="image" />
       <div className="overlay">
-           <h1 className="overlay-service" onClick={() => handleCategoryClick("mountain")}>Mountain</h1>
+           <h1 className="overlay-service" onClick={() => handleCategoryClick("Mountain")}>Mountain</h1>
           </div>
      </a>
      
@@ -75,13 +75,13 @@ const Home = ({clickCategory}) =>{
      <a className="road relative f2">
        <img src={road} alt="image" />
        <div className="overlay">
-           <h1 className="overlay-service" onClick={() => handleCategoryClick("road")}>Road</h1>
+           <h1 className="overlay-service" onClick={() => handleCategoryClick("Road")}>Road</h1>
           </div>
      </a>
      <a className="city relative f2">
       <img src={city} alt="image" />
       <div className="overlay" >
-           <h1 className="overlay-service" onClick={() => handleCategoryClick("city")}>City</h1>
+           <h1 className="overlay-service" onClick={() => handleCategoryClick("City")}>City</h1>
           </div>
      </a>
      

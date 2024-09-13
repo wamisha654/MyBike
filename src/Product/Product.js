@@ -11,17 +11,14 @@ const Product = (props) => {
   return (
     <div className="products">
       <section className="card" onClick={handleClick}>
-        <img src={props.img} className="card-img" />
+        <img src={props.image} className="card-img" />
         <div className="card-details">
-          <h3 className="card-title">{props.title}</h3>
-          <div className="card-reviews">
-            <div className="ratings-star">{props.star}{props.star}{props.star}</div>
-          </div>
-          <section className="card-price">
+            <h3 className="card-title">{props.name}</h3>
             <div className="price">
-              <del>{props.prevPrice}</del>{props.newPrice}
+              <del>{props.old_price + " PLN"}</del>
+              <p>{props.new_price + " PLN"}</p>
             </div>
-          </section>
+          
         </div>
       </section>
     </div>

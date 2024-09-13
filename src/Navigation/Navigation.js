@@ -22,7 +22,7 @@ const Navigation = ({ searchChange, clickCategory, priceRange}) => {
         <input type="search" placeholder="type here" onChange={searchChange} className="link ssch gray f6 tc f5-ns mr5" />
         <Link to = "carts" className="link mr3 f3"><BsCartFill /></Link>
         {localStorage.getItem('auth-token') 
-        ? <button className="link mr3 f3" onClick={()=>{localStorage.removeItem('auth-token'); window.location.replace("/")}}>Logout</button>
+        ? <button className=" logout-butt link mr3 f3" onClick={()=>{localStorage.removeItem('auth-token'); window.location.replace("/")}}>Logout</button>
         : <Link to = "signin" className="link f3"><RiAccountPinBoxFill /></Link>}
         
         

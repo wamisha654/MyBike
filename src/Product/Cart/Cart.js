@@ -20,20 +20,20 @@ const Cart = ({ selectedProduct,onAddToCart }) => {
     <div className="cart">
       <div>
         <div className="img-container center">
-          <h2>{selectedProduct.title}</h2>
-          <img className="img" src={selectedProduct.img} alt="image" />
+          <h2>{selectedProduct.name}</h2>
+          <img className="img" src={selectedProduct.image} alt="image" />
         </div>
         <div className="description">
           <h3>Description</h3>
           <p>
-            {selectedProduct.discription}
+            {selectedProduct.description}
           </p>
         </div>
       </div>
       <div className="add-cart ">
-        <h1>{selectedProduct.newPrice} </h1>
+        <h1>{selectedProduct.new_price + " PLN"} </h1>
         <p>current price</p>
-        <h2>{selectedProduct.title}</h2>
+        <h2>{selectedProduct.name}</h2>
         <div className="listings">
           <li><p><FaShippingFast /> Free delivery from PLN 3999.99</p></li>
           <li><p><MdOutlineCalendarMonth /> 30 days for exchange and return, 60 days</p></li>

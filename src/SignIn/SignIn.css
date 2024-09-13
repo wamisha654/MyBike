@@ -10,3 +10,8 @@
   cursor: pointer;
   color: darkred;
 }
+.input-radio{
+	display: flex;
+	gap: 10px;
+	padding: 10px;
+}

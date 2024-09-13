@@ -10,3 +10,13 @@
 	padding-top: 30px;
 	text-align: center;
 }
+.appointment-btn{
+	color: black;
+	font-weight: 500;
+	height: 29px;
+    width: 80px;
+    font-size: 15px;
+    background-color: palegreen;
+    cursor: pointer;
+    border-color: white;
+}
