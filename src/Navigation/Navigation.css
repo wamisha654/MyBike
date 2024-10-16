@@ -1,69 +1,177 @@
-.comp-name{
-	opacity: 1;
-    transition: opacity .15s ease-in;
-    color: black;
-    font-weight: bold;
-    font-size: 3rem;
-    text-decoration: none;
-    transition: color .15s ease-in;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-.first-nav{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 6em;
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.ssch{
-    width: 400px;
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
 }
-.Ulists{
-    text-decoration: none;
-    list-style: none;
-    display: flex;
-    justify-content: center;
+
+/* Main navigation container */
+.nav-main {
+  width: 100%;
+  background-color: #fff;
+  padding: 55px 35px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);  /* Increased shadow for better definition */
+  top: 0;
+  z-index: 1000;
 }
+
+/* First navigation section */
+.first-nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Space between elements for better layout */
+  gap: 2vw;
+}
+
+.comp-name {
+  color: #333;
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.comp-name:hover {
+  color: darkgoldenrod; /* Add subtle hover color change */
+}
+
+/* Search bar styling */
+.ssch {
+  padding: 10px 15px;
+  border: 2px solid #ddd;
+  border-radius: 30px;
+  width: 40%;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.ssch:focus {
+  border-color: #007BFF; /* Highlight border on focus */
+}
+
+/* Icons (cart and account) */
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.icon-container a, 
+.icon-container button {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: #333;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+.indented-txt{
+    color: goldenrod;
+}
+.icon-container p {
+  margin-left: 8px;
+  font-size: 15px;
+  text-decoration: underline;
+}
+
+/* Icon hover effect */
+.icon-container a:hover, 
+.logout-butt:hover {
+  color: darkgoldenrod;
+}
+
+.signin-icon, .cart-icon {
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.cart-icon {
+  margin-left: 2vw;
+}
+
+/* Logout button */
+.logout-butt {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-butt:hover {
+  background-color: darkgoldenrod;
+}
+
+/* Links section (store, service, about) */
+.Ulists {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
 .Ulists li {
-  position: relative; /* Make the parent list item positioned */
+  margin-right: 30px;
 }
-.Ulists a{
-    display: block;
-    text-decoration: none;
-    transition: all 0.25s ease;
+
+.Ulists a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
 }
-.Ulists ul{
-    text-decoration: none;
-    list-style: none;
-    
+
+.Ulists a:hover {
+  color: darkgoldenrod;
+  border-bottom: 2px solid darkgoldenrod; /* Adds a bottom border on hover */
 }
-#submenu{
-    width: 200px;
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    visibility: hidden;
-    z-index: 1;
-    text-align: left;
-    background-color: white;
-}
-.Ulists li:hover ul#submenu{
-    opacity: 1;
-    visibility: visible;
-    top: 20px;
-    padding: 5px;
-}
-#submenu > *{
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .first-nav {
+    flex-direction: column;
+  }
+
+  .ssch {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  .Ulists {
+    flex-direction: column;
     margin-top: 10px;
+  }
+
+  .Ulists li {
+    margin: 10px 0;
+  }
+
+  .icon-container {
+    margin-top: 10px;
+  }
+
+  .cart-icon {
+    margin-left: 0;
+  }
 }
-.logout-butt{
-    height: 29px;
-    width: 60px;
-    font-size: 14px;
-    border-radius: 10px;
-    background-color: palegreen;
-    border-color: greenyellow;
-    cursor: pointer;
+
+@media (min-width: 769px) {
+  .ssch {
+    width: 50%; /* Slightly wider search bar on larger screens */
+  }
+
+  .cart-icon {
+    margin-left: 3vw;
+  }
 }

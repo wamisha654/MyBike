@@ -7,6 +7,8 @@ import ProductList from './Product/ProductList.js';
 import Footer from './Footer/Footer.js';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Home/Home.js'; 
+import About from './About/About.js'; 
+import Contact from './Contact/Contact.js'
 import Service from './Service/Service.js'; 
 import Cart from './Product/Cart/Cart.js'; 
 import AddedCart from './Product/AddedCart/AddedCart.js';
@@ -15,6 +17,7 @@ import Delivery from './Product/Delivery/Delivery.js';
 const App = () => {
   const [initialData, setInitialData] = useState([]); // Store original fetched data
   const [data, setData] = useState([]); // Filtered data
+  const [totalProduct, setTotalProduct] = useState(0);
   
   useEffect(() => {
     fetch('http://localhost:400/allproducts')
@@ -62,7 +65,7 @@ const App = () => {
 
   const priceRange = (min, max) => {
     const filteredData = initialData.filter((item) => {
-      const price = parseFloat(item.newPrice);
+      const price = parseFloat(item.new_price);
       return price >= min && price <= max;
     });
     setData(filteredData);
@@ -82,14 +85,17 @@ const App = () => {
         <Navigation searchChange={onSearchChange} clickCategory={clickCategory} priceRange={priceRange} />
         <Routes>
           <Route path="/" element={<Home clickCategory={clickCategory} />} />
-          <Route path="/store" element={<ProductList data={filteredData} onSelect={handleProductSelect} />} />
+          <Route path="/store" element={<ProductList data={filteredData} onSelect={handleProductSelect} clickCategory={clickCategory} priceRange={priceRange}/>} />
           <Route path="/selectedProduct" element={<Cart selectedProduct={selectedProduct} onAddToCart={handleAddToCart} />} />
-          <Route path="/carts" element={<AddedCart addedProducts={cart} onProductRemove={handleProductRemove} />} />
+          <Route path="/carts" element={<AddedCart setTotalProduct={setTotalProduct} addedProducts={cart} onProductRemove={handleProductRemove} />} />
           <Route path="/service" element={<Service />} />
           <Route path="/appointment" element={<Appointment />} />
           <Route path="/signin" element={<SignIn />} />
-          <Route path="/delivery" element={<Delivery />} />
+          <Route path="/delivery" element={<Delivery totalProduct={totalProduct}/>} />
+          <Route path="/about" element={<About />}/>
+          <Route path="/contact" element={<Contact />}/>
         </Routes>
+        <Contact />
         <Footer />
       </div>
     </Router>

@@ -1,0 +1,16 @@
+.about{
+	margin: 0;
+	padding: 50px;
+	background: #f6f6f6;
+	font-family: sans-serif;
+}
+.about p{
+	margin: 3px;
+	font-size: 15px;
+}
+.about h1{
+	border-bottom: solid 2px black;
+}
+.about h4{
+	margin-top: 10px;
+}

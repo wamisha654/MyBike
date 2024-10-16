@@ -3,6 +3,7 @@ import './Cart.css';
 import { FaShippingFast } from "react-icons/fa";
 import { MdOutlineCalendarMonth } from "react-icons/md";
 import { SiContactlesspayment } from "react-icons/si";
+import {Link} from 'react-router-dom';
 
 const Cart = ({ selectedProduct,onAddToCart }) => {
   // Check if selectedProduct is null before accessing its properties
@@ -27,12 +28,14 @@ const Cart = ({ selectedProduct,onAddToCart }) => {
           <h3>Description</h3>
           <p>
             {selectedProduct.description}
+            <p>product number {selectedProduct.id}</p>
           </p>
         </div>
       </div>
       <div className="add-cart ">
         <h1>{selectedProduct.new_price + " PLN"} </h1>
         <p>current price</p>
+
         <h2>{selectedProduct.name}</h2>
         <div className="listings">
           <li><p><FaShippingFast /> Free delivery from PLN 3999.99</p></li>
@@ -40,12 +43,16 @@ const Cart = ({ selectedProduct,onAddToCart }) => {
           <li><p><FaShippingFast />  Delivery time 1-5 business days</p></li>
           <li><p><SiContactlesspayment /> Payment methods: regular transfer, cash on delivery, online payment</p></li>
         </div>
-        <button 
+        <div className="selected-buttons">
+          <button 
           className="button"
           onClick={() => onAddToCart(selectedProduct)} // Use onAddToCart prop
-        >
+          >
           Add to cart
-        </button>
+          </button>
+          <Link to="/delivery"><button className="button">Go to payment</button></Link>
+        </div>
+        
       </div>
     </div>
   );

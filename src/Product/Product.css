@@ -29,11 +29,44 @@ a{
 .price{
 	display: flex;
 	gap: 20px;
-	width: 100%;	
+	width: 100%;
+	align-items: center;	
 }
 .card-details{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	height: 98px;
+}
+.Ulists li {
+  position: relative; /* Make the parent list item positioned */
+}
+.Ulists a{
+    display: block;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+.Ulists ul{
+    text-decoration: none;
+    list-style: none;
+    
+}
+#submenu{
+    width: 180px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    visibility: hidden;
+    z-index: 1;
+    text-align: left;
+    background: #f6f6f6;
+}
+.Ulists li:hover ul#submenu{
+    opacity: 1;
+    visibility: visible;
+    top: 20px;
+    padding: 5px;
+}
+#submenu > *{
+    margin-top: 20px;
 }

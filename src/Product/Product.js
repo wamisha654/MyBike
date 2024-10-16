@@ -10,6 +10,7 @@ const Product = (props) => {
 
   return (
     <div className="products">
+      
       <section className="card" onClick={handleClick}>
         <img src={props.image} className="card-img" />
         <div className="card-details">
@@ -17,6 +18,7 @@ const Product = (props) => {
             <div className="price">
               <del>{props.old_price + " PLN"}</del>
               <p>{props.new_price + " PLN"}</p>
+              
             </div>
           
         </div>

@@ -1,47 +1,269 @@
-.carted{
+/* General Layout and Containers */
+.carted {
+	width: 100%;
 	display: flex;
 	justify-content: center;
+	gap: 40px;
+	background: #f6f6f6;
 }
-.cart-card{
-	
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	justify-content: space-between;
-	min-width: 50vw;
-	margin-top: 8px;
-	margin-right: 20px;
 
-}
-.prod-name{
- max-width: 140px;
-}
-.inc-dec-butt button{
- width: 25px;
-}
-.cart-card img{
-   width: 100px;
-   border: solid 1px;
-}
-.cart-card input{
-   max-width: 30px;
-}
-.price-item {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
-}
-.cart-description{
+.cart-description {
 	height: 300px;
 	min-width: 25vw;
 	padding: 20px;
 	border-radius: 6px;
-	background: #f6f6f6;
 	position: sticky;
-	top:0;
+	margin-top: 35px;
+	top: 0;
 	height: fit-content;
+	background: white;
 }
-.cart-description button{
+.payment-button{
+	display: flex;
+	justify-content: center;
+}
+
+.cart-prod-list {
+	width: 100%;
+	border-radius: 6px;
+}
+
+.list-container {
+	width: 60vw;
+	display: flex;
+	flex-direction: column;
+	border-radius: 7px;
+	align-items: center;
+	margin-top: 35px;
+	gap: 40px;
+}
+
+/* Cart Card Styling */
+.cart-card {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 6px;
+	background: white;
+	padding:15px ;
+}
+
+.cart-card img {
+	width: 100px;
+	border: solid 1px;
+	border-radius: 4px;
+}
+
+.cart-card input {
+	width: 28px;
+	height: 28px;
+	border: solid 1px #f6f6f6;
+	background: white;
+}
+
+/* Product Name */
+.prod-name {
+	width: 200px;
+}
+
+/* Quantity Buttons */
+.inc-dec-butt{
+	display: flex;
+	gap: 3px;
+}
+.inc-dec-butt button {
+	width: 25px;
+	border: none;
+}
+
+/* Price Section */
+.price-item {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 1rem;
+}
+
+/* Delivery Section */
+.delivery-container {
+	display: flex;
+	justify-content: center;
+}
+
+.delivery {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 30px 50px;
+	border-radius: 6px;
+	background: white;
+}
+
+.delivery h3 {
+	margin-bottom: 15px;
+}
+
+.delivery p {
+	font-size: 12px;
+}
+
+/* Address Fields */
+.address-itemfield {
+	width: 100%;
+	color: #7b7b7b;
+	font-size: 16px;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.address-itemfield input, 
+.address-itemfield textarea {
+	box-sizing: border-box;
+	width: 100%;
+	height: 50px;
+	border-radius: 4px;
+	padding-left: 15px;
+	border: 1px solid #c3c3c3;
+}
+
+.address-label {
+	position: absolute;
+	top: -10px;
+	left: 10px;
+	background-color: white;
+	padding: 0 5px;
+	font-size: 14px;
+	color: #666;
+}
+
+/* Select Input Styling */
+.address-select {
+	width: 100%;
+	padding: 10px;
+	font-size: 16px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+
+/* Delivery Options */
+.delivery-card {
+	display: flex;
+	justify-content: flex-start;
+	padding: 20px;
+	gap: 30px;
+	align-items: center;
+	width: 300px;
+	height: 80px;
+	border: solid 1px #c3c3c3;
+	border-radius: 4px;
+}
+
+.delivery-card img {
+	height: 50px;
+}
+
+.delivery-card input[type="radio"] {
+	transform: scale(1.5);
+	margin-right: 10px;
+}
+
+.delivery-card-container {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 40px;
+	border-radius: 6px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+.delivery-card-container-main {
+	width: 100%;
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	background: white;
+}
+
+.delivery-card-container-main h3 {
+	margin-bottom: 20px;
+	padding-left: 50px;
+	padding-top: 20px;
+}
+
+.deliv-title {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	font-size: 30px;
+}
+
+.deliv-title h3 {
+	font-size: 18px;
+}
+
+/* Payment Options */
+.payment-card {
+	display: flex;
+	justify-content: flex-start;
+	gap: 30px;
+	padding: 20px;
+	align-items: center;
+	width: 300px;
+	height: 80px;
+	border: solid 1px #c3c3c3;
+	border-radius: 6px;
+}
+
+.payment-card img {
+	height: 50px;
+}
+
+.payment-card input[type="radio"] {
+	transform: scale(1.5);
+	margin-right: 10px;
+}
+
+.payment-card-container {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 40px;
+	border-radius: 6px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+.payment-card-container-main {
+	width: 100%;
+	height: 330px;
+	display: flex;
+	flex-direction: column;
+	background: white;
+}
+
+.payment-card-container-main h3 {
+	margin-bottom: 20px;
+	padding-left: 50px;
+	padding-top: 20px;
+}
+
+/* Button Styling */
+.cart-description button {
 	background-color: lightgreen;
 	text-align: center;
+	color: white;
+	margin-top: 2.4rem;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+	.delivery {
+		width: auto;
+		padding: 30px;
+		margin: 20px;
+	}
 }

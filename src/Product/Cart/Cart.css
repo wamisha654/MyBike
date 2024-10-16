@@ -43,8 +43,9 @@
 .listings p{
 	margin-top: 2rem;
 }
+
 .button{
-	margin-top: 2.4rem;
+	
 	font: 3rem;
 	font-weight: 500;
 	border-radius: 5px;
@@ -52,4 +53,10 @@
 	height: 2.5rem;
 	background-color: lightgreen;
 	border-color: white;
+}
+.selected-buttons{
+	margin-top: 2.4rem;
+	display: flex;
+	flex-direction: column;
+  gap: 10px;
 }

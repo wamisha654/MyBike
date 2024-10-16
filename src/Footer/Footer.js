@@ -3,7 +3,7 @@ import './Footer.css'
 
 const Footer = () =>{
 	return(
-            <footer class="pv4 ph3 ph5-ns tc">
+            <footer class="footer pv4 ph3 ph5-ns tc">
   <a class="link dim gray dib h2 w2 br-100 mr3 pa2 bg-near-white ba b--black-10" href="#" title="">
     <svg data-icon="facebook" viewBox="0 0 32 32" >
       <title>facebook icon</title>

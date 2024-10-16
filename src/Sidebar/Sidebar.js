@@ -23,33 +23,33 @@ const Sidebar = ({toggleFilterSidebar,clickCategory, priceRange}) =>{
               </label>
               <label className = "sidebar-label-container">
                 <input type = "radio"  name = "rad" onClick={()=> handlePrice(1000,2000)}/>
-                <span className = "checkmark"></span>1000,2000 PLN
+                <span className = "checkmark"></span>1000_2000 PLN
 
                </label>
                
               <label className = "sidebar-label-container">
                 <input type = "radio"  name = "rad" onClick={()=> handlePrice(2000,3000)}/>
-                <span className = "checkmark"></span>2000,3000 PLN
+                <span className = "checkmark"></span>2000_3000 PLN
 
                </label>
                <label className = "sidebar-label-container">
                 <input type = "radio"  name = "rad" onClick={()=> handlePrice(3000,4000)}/>
-                <span className = "checkmark"></span>3000,4000 PLN
+                <span className = "checkmark"></span>3000_4000 PLN
 
                </label>
                <label className = "sidebar-label-container">
                 <input type = "radio"  name = "rad" onClick={()=> handlePrice(4000,5000)}/>
-                <span className = "checkmark"></span>4000,5000 PLN
+                <span className = "checkmark"></span>4000_5000 PLN
 
                </label>
                <label className = "sidebar-label-container">
                 <input type = "radio"  name = "rad" onClick={()=> handlePrice(5000,6000)}/>
-                <span className = "checkmark"></span>5000,6000 PLN
+                <span className = "checkmark"></span>5000_6000 PLN
 
                </label>
       </div>
       <div>
-      	<h2 className = "sidebar-title"> Category </h2>
+      	<h2 className = "sidebar-title"> Color </h2>
               
               <label className = "sidebar-label-container">
                 <input type = "radio"  name = "rad" onClick={() => handleCategoryClick(null)}/>

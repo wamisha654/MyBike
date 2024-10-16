@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import imgShop from './shop.jpg';
+import imgShop from './shop.png';
 import imgService from './service.jpg';
 import children from './children.jpg';
 import city from './city.png';
@@ -15,7 +15,7 @@ const Home = ({clickCategory}) =>{
     }
  return(
   <div className="home">
-   <h2 className="types">Welcome to our site</h2>  
+   <h2 className="types">You are in the right place <br/><span className="indented-text">to buy a bicycle or do service</span></h2>
    <div className="main-container">
     <div className = "container">
      <div className="wrapper">
@@ -53,11 +53,11 @@ const Home = ({clickCategory}) =>{
     </div>
     
    </div>
-  <h2 className="types">Is this what you are looking for?</h2>  
+  <h2 className="types">Categories</h2>  
   <Link to="store">
   <div className="bike-category">
     <div className="img-wrapper">
-     <a className="children relative f2 100h">
+     <a className="children relative f2">
        <img src={children} alt="image" />
        <div className="overlay">
            <h1 className="overlay-service" onClick={() => handleCategoryClick("Children")}>Children</h1>
